@@ -16,3 +16,11 @@ arrI=np.asarray(I).copy()
 data=np.zeros((120000,3),int)
 temp=np.zeros((120000,1),int)
 
+for h in range(300):
+    for w in range(400):
+        data[h*400+w][0]=arrkey1[h][w]
+        data[h*400+w][1]=arrkey2[h][w]
+        data[h*400+w][2]=arrI[h][w]
+        temp[h*400+w]=arrEprime[h][w]
+
+
