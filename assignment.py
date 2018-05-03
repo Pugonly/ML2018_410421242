@@ -42,3 +42,11 @@ while epoch <maxlimit and abs(x[0]-temp_x0)> 0.00001 and abs(x[1]-temp_x1)>0.000
     epoch+=1
 
 print(x[0],x[1],x[2])
+ima=np.zeros((300,400),int)
+
+for j in range(300):
+    for i in range(400):
+        ima[j][i]=(arrEprime[j][i]-x[0]*arrkey1[j][i]-x[1]*arrkey2[j][i])/x[2]
+
+
+scipy.misc.imsave("output.jpg", ima)
